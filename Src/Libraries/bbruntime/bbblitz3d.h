@@ -6,7 +6,6 @@
 #include "../blitz3d/blitz3d.h"
 #include "../blitz3d/world.h"
 #include "../blitz3d/texture.h"
-#include "../blitz3d/brush.h"
 #include "../blitz3d/camera.h"
 #include "../blitz3d/sprite.h"
 #include "../blitz3d/meshmodel.h"
@@ -21,19 +20,13 @@
 
 extern gxScene *gx_scene;
 
-void bbHWMultiTex(int enable);
 int bbHWTexUnits();
 int bbGfxDriverCaps3D();
-void bbWBuffer(int enable);
-void bbDither(int enable);
-void bbAntiAlias(int enable);
 void bbWireFrame(int enable);
-void bbAmbientLight(float r, float g, float b);
 void bbClearCollisions();
 void bbCollisions(int src_type, int dest_type, int method, int response);
 void bbUpdateWorld (float eslapsed=1.f);
-void bbCaptureWorld ();
-void bbRenderWorld(float tween=1.f);
+void bbCaptureWorld();
 void bbPrintWorldAssetList();
 int bbActiveTextures();
 int bbTrisRendered();
@@ -41,29 +34,12 @@ float bbStats3D(int n);
 class Texture* bbCreateTexture(int w, int h, int flags=1, int frames=1);
 void bbScaleTexture(Texture *t, float u_scale, float v_scale);
 class Texture* bbLoadTexture(const String& file, int flags=1);
-class Texture* bbLoadAnimTexture(const String& file, int flags, int w, int h, int first, int cnt);
 void bbFreeTexture(class Texture* t);
-void bbTextureBlend(class Texture* t, int blend);
-void bbTextureCoords(class Texture* t, int flags);
-void bbRotateTexture(class Texture* t, float angle);
-void bbPositionTexture(class Texture* t, float u_pos, float v_pos);
 int bbTextureWidth(class Texture* t);
 int bbTextureHeight(class Texture* t);
 String bbTextureName(class Texture* t);
-void bbSetCubeFace(class Texture* t, int face);
-void bbSetCubeMode(class Texture* t, int mode);
 class gxCanvas* bbTextureBuffer(class Texture* t, int frame=0);
 void bbClearTextureFilters();
-class Brush* bbCreateBrush(float r=255.f, float g=255.f, float b=255.f);
-class Brush* bbLoadBrush(const String& file, int flags=1, float u_scale=1.f, float v_scale=1.f);
-void bbFreeBrush(class Brush* b);
-void bbBrushColor(class Brush* br, float r, float g, float b);
-void bbBrushAlpha(class Brush* b, float alpha);
-void bbBrushShininess(class Brush* b, float n);
-void bbBrushTexture(class Brush* b, Texture* t, int frame, int index);
-class Texture* bbGetBrushTexture(class Brush* b, int index);
-void bbBrushBlend(class Brush* b, int blend);
-void bbBrushFX(class Brush* b, int fx);
 class MeshModel* bbLoadMesh(const String& f, class Object* p=nullptr);
 class MeshModel* bbLoadAnimMesh(const String& f, class Object* p=nullptr);
 int bbLoadAnimSeq(class Object* o, const String& f);
@@ -210,15 +186,6 @@ void bbEntityParent(class Object* e, class Object* p, int global=1);
 int bbCountChildren(class Object* e);
 class Object* bbGetChild(class Object* e, int index);
 class Object* bbFindChild(class Object* e, const String& t);
-void bbPaintEntity(class Model* m, Brush* b);
-void bbEntityColor(class Model* m, float r, float g, float b);
-void bbEntityAlpha(class Model* m, float alpha);
-void bbEntityShininess(class Model* m, float shininess);
-void bbEntityTexture(class Model* m, Texture* t, int frame=0, int index=0);
-void bbEntityBlend(class Model* m, int blend);
-void bbEntityFX(class Model* m, int fx);
-void bbEntityAutoFade(class Model* m, float nr, float fr);
-void bbEntityOrder(class Object* o, int n);
 void bbHideEntity(class Object* e);
 void bbShowEntity(class Object* e);
 void bbFreeEntity(class Object* e);
