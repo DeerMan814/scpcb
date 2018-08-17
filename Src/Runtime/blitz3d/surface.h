@@ -48,8 +48,7 @@ public:
 	~Surface();
 
 	void setName( const String& t );
-	void setBrush( const Brush &b );
-
+	
 	void clear( bool verts,bool tris );
 
 	void addVertex( const Vertex &v ){
@@ -96,20 +95,18 @@ public:
 
 	void updateNormals();
 
-	gxMesh *getMesh();
-	gxMesh *getMesh( const std::vector<Bone> &bones );
+	//gxMesh *getMesh();
+	//gxMesh *getMesh( const std::vector<Bone> &bones );
 
     String getName()const{ return name; }
-	const Brush &getBrush()const{ return brush; }
 	int numVertices()const{ return vertices.size(); }
 	int numTriangles()const{ return triangles.size(); }
 	const Vertex &getVertex( int n )const{ return vertices[n]; }
 	const Triangle &getTriangle( int n )const{ return triangles[n]; }
 
 private:
-	Brush brush;
     String name;
-	gxMesh *mesh;
+	//gxMesh *mesh;
     std::vector<Vertex> vertices;
     std::vector<Triangle> triangles;
 	int mesh_vs,mesh_ts;

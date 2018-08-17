@@ -197,31 +197,3 @@ MeshModel *MeshUtil::createCone( const Brush &b,int segs,bool solid ){
 	}
 	return m;
 }
-
-void MeshUtil::lightMesh( MeshModel *m,const Vector &pos,const Vector &rgb,float range ){
-	if( range ){
-		float att=1.0f/range;
-		const MeshModel::SurfaceList &surfs=m->getSurfaces();
-		for( int k=0;k<surfs.size();++k ){
-			Surface *s=surfs[k];
-			for( int j=0;j<s->numVertices();++j ){
-				const Surface::Vertex &v=s->getVertex( j );
-				Vector lv=pos-v.coords;
-				float dp=v.normal.normalized().dot( lv );
-				if( dp<=0 ) continue;
-				float d=lv.length();
-				float i=1/(d*att)*(dp/d);
-				s->setColor( j,s->getColor(j)+rgb*i );
-			}
-		}
-	}else{
-		const MeshModel::SurfaceList &surfs=m->getSurfaces();
-		for( int k=0;k<surfs.size();++k ){
-			Surface *s=surfs[k];
-			for( int j=0;j<s->numVertices();++j ){
-				const Surface::Vertex &v=s->getVertex( j );
-				s->setColor( j,s->getColor(j)+rgb );
-			}
-		}
-	}
-}

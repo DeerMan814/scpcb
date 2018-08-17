@@ -125,6 +125,7 @@
       <AssemblerOutput>NoListing</AssemblerOutput>
       <MinimalRebuild>false</MinimalRebuild>
       <CallingConvention>Cdecl</CallingConvention>
+      <AdditionalIncludeDirectories>..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -207,6 +208,7 @@
       <ProgramDataBaseFileName>.\obj\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CallingConvention>Cdecl</CallingConvention>
+      <AdditionalIncludeDirectories>..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -253,16 +255,34 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Font.cpp" />
     <ClCompile Include="gxdir.cpp" />
     <ClCompile Include="gxfilesystem.cpp" />
     <ClCompile Include="gxutil.cpp" />
+    <ClCompile Include="Line.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="StringType.cpp" />
+    <ClCompile Include="SysEvents.cpp" />
+    <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="Font.h" />
     <ClInclude Include="gxdir.h" />
     <ClInclude Include="gxfilesystem.h" />
+    <ClInclude Include="Graphics.h" />
     <ClInclude Include="gxutil.h" />
+    <ClInclude Include="Line.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Vector.h" />
+    <ClInclude Include="Window.h" />
     <ClInclude Include="StringType.h" />
+    <ClInclude Include="SysEvents.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

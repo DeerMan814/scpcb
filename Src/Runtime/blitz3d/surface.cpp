@@ -1,12 +1,9 @@
 #include <vector>
 #include <map>
 
-#include "../gxruntime/gxgraphics.h"
 #include "../gxruntime/StringType.h"
 
 #include "surface.h"
-
-extern gxGraphics *gx_graphics;
 
 static Surface::Monitor nop_mon;
 

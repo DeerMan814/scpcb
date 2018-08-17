@@ -1,12 +1,12 @@
 #include <vector>
 
-#include "../gxruntime/gxruntime.h"
-#include "../gxruntime/gxgraphics.h"
+//#include "../gxruntime/gxruntime.h"
+//#include "../gxruntime/gxgraphics.h"
 
 #include "meshmodel.h"
 #include "meshcollider.h"
 
-extern gxGraphics *gx_graphics;
+//extern gxGraphics *gx_graphics;
 
 struct MeshModel::Rep : public Surface::Monitor{
 
@@ -28,14 +28,13 @@ struct MeshModel::Rep : public Surface::Monitor{
 		for( int k=0;k<surfaces.size();++k ) delete surfaces[k];
 	}
 
-	Surface *createSurface( const Brush &b ){
+	Surface *createSurface(  ){
 		Surface *t=new Surface( this );
 		surfaces.push_back( t );
-		t->setBrush( b );
 		return t;
 	}
 
-	Surface *findSurface( const Brush &b ){
+	/*Surface *findSurface( const Brush &b ){
 		for( int k=0;k<surfaces.size();++k ){
 			Surface *s=surfaces[k];
 			if( s->getBrush()<b || b<s->getBrush() ) continue;
@@ -49,7 +48,7 @@ struct MeshModel::Rep : public Surface::Monitor{
 			Surface *s=surfaces[k];
 			s->setBrush( b );
 		}
-	}
+	}*/
 
 	void add( Rep *t ){
 		if( cullBox.empty() && !t->cullBox.empty() ){
@@ -57,8 +56,9 @@ struct MeshModel::Rep : public Surface::Monitor{
 		}
 		for( int k=0;k<t->surfaces.size();++k ){
 			Surface *src=t->surfaces[k];
-			Surface *dest=findSurface( src->getBrush() );
-			if( !dest ) dest=createSurface( src->getBrush() );
+			//Surface *dest=findSurface( src->getBrush() );
+            Surface *dest= dest = createSurface();
+			//if( !dest ) dest=createSurface( src->getBrush() );
 			int j;
 			for( j=0;j<src->numTriangles();++j ){
 				Surface::Triangle t=src->getTriangle( j );

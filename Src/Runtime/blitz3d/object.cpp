@@ -1,10 +1,10 @@
 #include <vector>
 
-#include "../gxruntime/gxruntime.h"
+//#include "../gxruntime/gxruntime.h"
 
 #include "object.h"
 
-extern gxRuntime *gx_runtime;
+//extern gxRuntime *gx_runtime;
 
 enum {
     INVALID_LOCALTFORM = 1,
@@ -163,27 +163,6 @@ const Transform &Object::getBaseRenderTform()const{
 
 const Transform &Object::getPrevWorldTform()const{
 	return prev_tform;
-}
-
-gxChannel *Object::emitSound( gxSound *sound ){
-	if( !sound ) return 0;
-
-	gxChannel *chan=nullptr;//sound->play3d( &getWorldTform().v.x,&velocity.x );
-	for( int k=0;k<channels.size();++k ){
-		if( chan==channels[k] ) return chan;
-		if( !channels[k] ) return channels[k]=chan;
-	}
-	channels.push_back( chan );
-	return chan;
-}
-
-void Object::updateSounds(){
-	for( int k=0;k<channels.size();++k ){
-		if( gxChannel *chan=channels[k] ){
-			if( chan->isPlaying() )	chan->set3d( &getWorldTform().v.x,&velocity.x );
-			else channels[k]=0;
-		}
-	}
 }
 
 Object *Object::_orphans, *Object::_last_orphan;

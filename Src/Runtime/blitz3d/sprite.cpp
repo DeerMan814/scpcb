@@ -1,7 +1,7 @@
 #include <vector>
 
-#include "../gxruntime/gxruntime.h"
-#include "../gxruntime/gxgraphics.h"
+//#include "../gxruntime/gxruntime.h"
+//#include "../gxruntime/gxgraphics.h"
 
 #include "sprite.h"
 
@@ -14,20 +14,20 @@ static float tex_coords1[2][2] = { { 1,0 },{ 1,0 } };
 static float tex_coords2[2][2] = { { 1,1 },{ 1,1 } };
 static float tex_coords3[2][2] = { { 0,1 },{ 0,1 } };
 
-extern gxRuntime *gx_runtime;
-extern gxGraphics *gx_graphics;
+//extern gxRuntime *gx_runtime;
+//extern gxGraphics *gx_graphics;
 
-static gxMesh *mesh;
+//static gxMesh *mesh;
 static int mesh_size;
 static std::vector<int> mesh_indices;
 
 static int allocIndex() {
     if (!mesh_indices.size()) {
-        if (mesh_size) gx_graphics->freeMesh(mesh);
+        //if (mesh_size) gx_graphics->freeMesh(mesh);
         for (int k = 0; k<256; ++k) {
             mesh_indices.push_back(mesh_size++);
         }
-        mesh = gx_graphics->createMesh(mesh_size * 4, mesh_size * 2, 0);
+        //mesh = gx_graphics->createMesh(mesh_size * 4, mesh_size * 2, 0);
     }
     int n = mesh_indices.back();
     mesh_indices.pop_back();
@@ -37,7 +37,7 @@ static int allocIndex() {
 static void freeIndex(int n) {
     mesh_indices.push_back(n);
     if (mesh_indices.size() != mesh_size) return;
-    gx_graphics->freeMesh(mesh);
+    //gx_graphics->freeMesh(mesh);
     mesh_indices.clear();
     mesh_size = 0;
 }
@@ -125,7 +125,7 @@ bool Sprite::render(const RenderContext &rc) {
 
     if (!rc.getWorldFrustum().cull(verts, 4)) return false;
 
-    mesh->lock(false);
+    /*mesh->lock(false);
     int fv = mesh_index * 4, ft = mesh_index * 2;
     mesh->setVertex(fv + 0, &verts[0].x, null, tex_coords0);
     mesh->setVertex(fv + 1, &verts[1].x, null, tex_coords1);
@@ -133,8 +133,8 @@ bool Sprite::render(const RenderContext &rc) {
     mesh->setVertex(fv + 3, &verts[3].x, null, tex_coords3);
     mesh->setTriangle(ft + 0, 0, 1, 2);
     mesh->setTriangle(ft + 1, 0, 2, 3);
-    mesh->unlock();
+    mesh->unlock();*/
 
-    enqueue(mesh, fv, 4, ft, 2);
+    //enqueue(mesh, fv, 4, ft, 2);
     return false;
 }

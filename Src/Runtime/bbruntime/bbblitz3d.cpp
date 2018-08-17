@@ -272,11 +272,6 @@ void  bbUpdateWorld( float elapsed ){
 	update_ms=gx_runtime->getMilliSecs()-update_ms;
 }
 
-void  bbCaptureWorld(){
-	debug3d();
-	world->capture();
-}
-
 void  bbRenderWorld( float tween ){
 	debug3d();
 

@@ -262,10 +262,8 @@
     <ClCompile Include="meshloader.cpp" />
     <ClCompile Include="meshmodel.cpp" />
     <ClCompile Include="meshutil.cpp" />
-    <ClCompile Include="model.cpp" />
     <ClCompile Include="object.cpp" />
     <ClCompile Include="pivot.cpp" />
-    <ClCompile Include="planemodel.cpp" />
     <ClCompile Include="sprite.cpp" />
     <ClCompile Include="surface.cpp" />
     <ClCompile Include="world.cpp" />
@@ -285,10 +283,8 @@
     <ClInclude Include="meshloader.h" />
     <ClInclude Include="meshmodel.h" />
     <ClInclude Include="meshutil.h" />
-    <ClInclude Include="model.h" />
     <ClInclude Include="object.h" />
     <ClInclude Include="pivot.h" />
-    <ClInclude Include="planemodel.h" />
     <ClInclude Include="rendercontext.h" />
     <ClInclude Include="sprite.h" />
     <ClInclude Include="surface.h" />

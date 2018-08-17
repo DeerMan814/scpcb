@@ -3,8 +3,6 @@
 
 #include <vector>
 
-#include "../gxruntime/gxchannel.h"
-
 #include "../gxruntime/StringType.h"
 
 #include "animator.h"
@@ -49,8 +47,6 @@ public:
 	void setObscurer( bool t ){ obscurer=t; }
 	void setAnimation( const Animation &t ){ anim=t; }
 	void setAnimator( Animator *t );
-
-	gxChannel *emitSound( gxSound *sound );
 
 	//overridables!
 	virtual bool collide( const Line &line,float radius,::Collision *curr_coll,const Transform &t ){ return false; }
@@ -161,7 +157,6 @@ protected:
 	bool obscurer;
 	float elapsed;
 	Vector velocity;
-    std::vector<gxChannel*> channels;
 	Vector capt_pos,capt_scl;
 	Quat capt_rot;
 	mutable Object *last_copy;

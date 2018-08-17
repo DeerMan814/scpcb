@@ -26,7 +26,6 @@ void bbWireFrame(int enable);
 void bbClearCollisions();
 void bbCollisions(int src_type, int dest_type, int method, int response);
 void bbUpdateWorld (float eslapsed=1.f);
-void bbCaptureWorld();
 void bbPrintWorldAssetList();
 int bbActiveTextures();
 int bbTrisRendered();
