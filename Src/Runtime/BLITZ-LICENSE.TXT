@@ -1,4 +1,4 @@
-The contents of this directory are based on Blitz3D, created by Blitz Research.
+The contents of this directory are based on Blitz3D, created by Blitz Research Ltd.
 
 Blitz3D is released under the zlib/libpng license.
 
