@@ -9,7 +9,7 @@ The original game's source code can be found here: https://github.com/Regalis11/
 
 The game is based on the works of the [SCP Foundation community][scp-wiki].
 
-This game and the source code are licensed under [Creative Commons Attribution-ShareAlike 3.0 License][cc3.0].
+All portions of this game and the source code, unless specified otherwise, are licensed under [Creative Commons Attribution-ShareAlike 3.0 License][cc3.0].
 
 [vs2017]: https://visualstudio.microsoft.com/vs/
 [scp-wiki]: http://www.scp-wiki.net/
