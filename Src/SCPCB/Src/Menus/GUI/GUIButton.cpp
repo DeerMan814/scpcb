@@ -1,31 +1,25 @@
 #include <bbgraphics.h>
 
 #include "GUIButton.h"
-#include "GUIFrame.h"
-#include "../../Assetmgmt/Audio.h"
 #include "../../Assetmgmt/Assets.h"
+#include "../Menu.h"
 
 namespace CBN {
 
 GUIButton::GUIButton(int x, int y, int width, int height, const String& txt, bool bigFont, bool relative)
-    : GUIFrame(x, y, width, height, 0, 0, relative) {
-    text = txt;
+    : GUIButtonBase(x, y, width, height, txt, relative) {
     this->bigFont = bigFont;
 }
 
 void GUIButton::update() {
-    GUIFrame::update();
-    if (isMouseHit()) {
-        PlaySound_SM(sndMgmt->button);
-    }
+    GUIButtonBase::update();
 }
 
 void GUIButton::draw() {
-    GUIFrame::draw();
-    if (isMouseHover()) {
-        bbColor(30, 30, 30);
-        bbRect(x + 4, y + 4, width - 8, height - 8);
-    }
+    GUIButtonBase::draw();
+    int scale = relative ? (int)MenuScale : 1;
+    DrawTiledImageRect(uiAssets->tileWhite, 0, (y % 256), 512, 512, x, y, width, height);
+    DrawTiledImageRect(uiAssets->tileBlack, 0, (y % 256), 512, 512, x + 3 * scale, y + 3 * scale, width - 6 * scale, height - 6 * scale);
 
     bbColor(255, 255, 255);
     if (bigFont) {

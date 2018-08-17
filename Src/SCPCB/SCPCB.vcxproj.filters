@@ -252,7 +252,13 @@
     <ClCompile Include="Src\Menus\GUI\GUIButton.cpp">
       <Filter>Source Files\Src\Menus\GUI</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Menus\GUI\GUIFrame.cpp">
+    <ClCompile Include="Src\Menus\GUI\GUITick.cpp">
+      <Filter>Source Files\Src\Menus\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Menus\GUI\GUIButtonBase.cpp">
+      <Filter>Source Files\Src\Menus\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Menus\GUI\GUIBase.cpp">
       <Filter>Source Files\Src\Menus\GUI</Filter>
     </ClCompile>
   </ItemGroup>
@@ -404,7 +410,13 @@
     <ClInclude Include="Src\Menus\GUI\GUIButton.h">
       <Filter>Header Files\Src\Menus\GUI</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Menus\GUI\GUIFrame.h">
+    <ClInclude Include="Src\Menus\GUI\GUITick.h">
+      <Filter>Header Files\Src\Menus\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Menus\GUI\GUIButtonBase.h">
+      <Filter>Header Files\Src\Menus\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Menus\GUI\GUIBase.h">
       <Filter>Header Files\Src\Menus\GUI</Filter>
     </ClInclude>
   </ItemGroup>
