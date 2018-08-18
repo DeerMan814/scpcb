@@ -28,7 +28,7 @@ freely, subject to the following restrictions:
 #include <vector>
 #include <map>
 
-#include "../../World/Components/Graphics.h"
+#include "Graphics.h"
 
 #include "Texture.h"
 #include "Shader.h"
@@ -41,7 +41,7 @@ freely, subject to the following restrictions:
 
 namespace GX {
 
-struct Font {
+class Font {
     public:
         Font(Graphics* gfx,const String& fn,int h,Shader* s);
         ~Font();

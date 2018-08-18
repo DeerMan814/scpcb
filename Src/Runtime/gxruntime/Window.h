@@ -31,6 +31,16 @@ namespace GX {
 
     class Window {
     public:
+        Window(String c, int w, int h, bool fs);
+        ~Window();
+
+        virtual void update();
+        virtual void swap(bool vsyncEnabled = true);
+
+        ID3D11Device* getDxDevice() const;
+        ID3D11DeviceContext* getDxContext() const;
+        ID3D11RenderTargetView* getBackBufferRtv() const;
+
         virtual void update() = 0;
         virtual void swap(bool vsyncEnabled = true) = 0;
         virtual bool isOpen() const;
@@ -40,8 +50,7 @@ namespace GX {
 
         SDL_Window* getSdlWindow() const;
     private:
-        Window() {};
-        ~Window() {};
+        Window(){};
 
         String caption;
         int width; int height; bool fullscreen;
@@ -51,6 +60,18 @@ namespace GX {
 
         bool open;
         bool vsync;
+
+        IDXGIFactory1* dxgiFactory;
+        DXGI_SWAP_CHAIN_DESC dxSwapChainDesc;
+        IDXGISwapChain* dxSwapChain;
+        ID3D11Device* dxDevice;
+        ID3D11DeviceContext* dxContext;
+        ID3D11RenderTargetView* dxBackBufferRtv;
+        D3D11_RASTERIZER_DESC dxRasterizerStateDesc;
+        ID3D11RasterizerState* dxRasterizerState;
+        D3D11_BLEND_DESC dxBlendStateDesc;
+        ID3D11BlendState* dxBlendState;
+        D3D11_VIEWPORT dxViewport;
     };
 
 }
