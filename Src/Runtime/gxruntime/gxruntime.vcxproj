@@ -125,7 +125,7 @@
       <AssemblerOutput>NoListing</AssemblerOutput>
       <MinimalRebuild>false</MinimalRebuild>
       <CallingConvention>Cdecl</CallingConvention>
-      <AdditionalIncludeDirectories>..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Libraries\FreeImage-3.18.0\Dist\x32;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -176,6 +176,7 @@
       <AssemblerOutput>NoListing</AssemblerOutput>
       <MinimalRebuild>false</MinimalRebuild>
       <CallingConvention>Cdecl</CallingConvention>
+      <AdditionalIncludeDirectories>..\..\Libraries\FreeImage-3.18.0\Dist\x64;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -208,7 +209,7 @@
       <ProgramDataBaseFileName>.\obj\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CallingConvention>Cdecl</CallingConvention>
-      <AdditionalIncludeDirectories>..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Libraries\FreeImage-3.18.0\Dist\x32;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -240,6 +241,7 @@
       <ProgramDataBaseFileName>.\obj\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CallingConvention>Cdecl</CallingConvention>
+      <AdditionalIncludeDirectories>..\..\Libraries\FreeImage-3.18.0\Dist\x64;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -257,16 +259,23 @@
   <ItemGroup>
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Font.cpp" />
+    <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="gxdir.cpp" />
     <ClCompile Include="gxfilesystem.cpp" />
     <ClCompile Include="gxutil.cpp" />
+    <ClCompile Include="IO.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="Shader.cpp" />
     <ClCompile Include="StringType.cpp" />
     <ClCompile Include="SysEvents.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="UserInput.cpp" />
     <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Color.h" />
@@ -275,10 +284,15 @@
     <ClInclude Include="gxfilesystem.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="gxutil.h" />
+    <ClInclude Include="IO.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="Mesh.h" />
     <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="UserInput.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="StringType.h" />

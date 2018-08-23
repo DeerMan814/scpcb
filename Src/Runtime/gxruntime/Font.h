@@ -35,9 +35,9 @@ freely, subject to the following restrictions:
 #include "Material.h"
 #include "Mesh.h"
 
-#include "../Misc/String.h"
-#include "../Math/Vector.h"
-#include "../Math/Rectangle.h"
+#include "StringType.h"
+#include "Vector.h"
+#include "Rectangle.h"
 
 namespace GX {
 

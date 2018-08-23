@@ -47,17 +47,14 @@ namespace GX {
         Window* getWindow() const;
         FT_Library* getFreeTypeLibrary();
 
-        virtual void update();
+        void update();
         void swap(bool vsync = true);
-
-        virtual void clear(Color color) = 0;
 
         Matrix4x4f projectionMatrix;
         Matrix4x4f viewMatrix;
 
         Rectanglei viewport;
 
-        virtual void update();
         void updateViewport();
         void updateDxCBuffer(Matrix4x4f worldMatrix);
         void useVertexInputLayout();

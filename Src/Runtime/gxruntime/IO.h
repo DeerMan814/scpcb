@@ -20,26 +20,40 @@ freely, subject to the following restrictions:
 
 **/
 
-#ifndef MATERIAL_H_INCLUDED
-#define MATERIAL_H_INCLUDED
+#ifndef IO_H_INCLUDED
+#define IO_H_INCLUDED
 
-#include "StringType.h"
-#include "Shader.h"
-#include "Texture.h"
+#include <set>
+
+#include "SysEvents.h"
+#include "UserInput.h"
+#include "Window.h"
+
+#include "Vector.h"
 
 namespace GX {
 
-struct Material {
-    public:
-        Material(Shader* sh,Texture* t);
+class IO {
+    private:
+        SysEvents::Subscriber keyboardSubscriber;
+        SysEvents::Subscriber mouseSubscriber;
+        SysEvents::Subscriber gamepadSubscriber;
 
-        Shader* getShader() const;
-        Texture* getTexture() const;
-    protected:
-        Material(){};
-        Shader* shader; Texture* texture;
+        std::set<UserInput*> inputs;
+        Vector2i mousePos;
+    public:
+        IO(Window* window);
+        ~IO();
+
+        void update();
+
+        void trackInput(UserInput* input);
+        void untrackInput(UserInput* input);
+
+        Vector2i getMousePosition() const;
 };
 
 }
 
 #endif
+

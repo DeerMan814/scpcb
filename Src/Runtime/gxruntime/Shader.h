@@ -20,24 +20,41 @@ freely, subject to the following restrictions:
 
 **/
 
-#ifndef MATERIAL_H_INCLUDED
-#define MATERIAL_H_INCLUDED
+#ifndef SHADER_H_INCLUDED
+#define SHADER_H_INCLUDED
 
+#include <dxgi.h>
+#include <d3dcommon.h>
+#include <d3d11.h>
+
+#include <inttypes.h>
+#include <vector>
+
+#include "Graphics.h"
 #include "StringType.h"
-#include "Shader.h"
-#include "Texture.h"
 
 namespace GX {
 
-struct Material {
+struct Shader {
     public:
-        Material(Shader* sh,Texture* t);
+        Shader::Shader(Graphics* gfx, const String& path);
+        ~Shader();
 
-        Shader* getShader() const;
-        Texture* getTexture() const;
+        void useShader();
+
+        uint8_t* getDxVsCode(); int getDxVsCodeLen() const;
+        uint8_t* getDxFsCode(); int getDxFsCodeLen() const;
     protected:
-        Material(){};
-        Shader* shader; Texture* texture;
+        Shader(){};
+        String filepath;
+
+        std::vector<uint8_t> vertexShaderBytecode;
+        std::vector<uint8_t> fragmentShaderBytecode;
+
+        ID3D11VertexShader* dxVertexShader;
+        ID3D11PixelShader* dxFragmentShader;
+
+        Graphics* graphics;
 };
 
 }

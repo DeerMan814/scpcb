@@ -24,6 +24,12 @@ freely, subject to the following restrictions:
 #define GXWINDOW_H
 
 #include <SDL.h>
+#include <SDL_syswm.h>
+
+#include <dxgi.h>
+#include <d3dcommon.h>
+#include <d3d11.h>
+
 #include "StringType.h"
 #include "SysEvents.h"
 
@@ -41,8 +47,6 @@ namespace GX {
         ID3D11DeviceContext* getDxContext() const;
         ID3D11RenderTargetView* getBackBufferRtv() const;
 
-        virtual void update() = 0;
-        virtual void swap(bool vsyncEnabled = true) = 0;
         virtual bool isOpen() const;
 
         int getWidth() const;
