@@ -24,14 +24,22 @@ freely, subject to the following restrictions:
 
 using namespace GX;
 
-Material::Material(Shader* sh,Texture* t) {
-    shader = sh; texture = t;
+Material::Material(Shader* sh, Texture** t, int texCount) {
+    shader = sh;
+    textures = new Texture*[texCount];
+    for (int i=0;i<texCount;i++) {
+        textures[i] = t[i];
+    }
+}
+
+Material::~Material() {
+    delete[] textures;
 }
 
 Shader* Material::getShader() const {
     return shader;
 }
 
-Texture* Material::getTexture() const {
-    return texture;
+Texture* Material::getTexture(int i) const {
+    return textures[i];
 }

@@ -1,4 +1,4 @@
-#include "../gxruntime/gxruntime.h"
+//#include "../gxruntime/gxruntime.h"
 
 #include "collision.h"
 
@@ -21,7 +21,7 @@ bool Collision::update( const Line &line,float t,const Vector &n ){
 //
 // NEW VERSION
 //
-extern gxRuntime *gx_runtime;
+//extern gxRuntime *gx_runtime;
 
 bool Collision::sphereCollide( const Line &line,float radius,const Vector &dest,float dest_radius ){
 

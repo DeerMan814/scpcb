@@ -140,7 +140,9 @@ void Font::renderAtlas(long chr) {
     if (buffer!=nullptr) {
         Atlas newAtlas;
         newAtlas.texture = new Texture(graphics,atlasDims,atlasDims,false,buffer);
-        newAtlas.material = new Material(shader,newAtlas.texture);
+        Texture* textures[1];
+        textures[0] = newAtlas.texture;
+        newAtlas.material = new Material(shader,textures,1);
         newAtlas.mesh = new Mesh(graphics,Primitive::TYPE::TRIANGLE);
         newAtlas.mesh->setMaterial(newAtlas.material);
         atlases.push_back(newAtlas);

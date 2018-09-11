@@ -31,13 +31,15 @@ namespace GX {
 
 struct Material {
     public:
-        Material(Shader* sh,Texture* t);
+        Material(Shader* sh,Texture** t,int texCount);
+        ~Material();
 
         Shader* getShader() const;
-        Texture* getTexture() const;
+        Texture* getTexture(int i) const;
     protected:
         Material(){};
-        Shader* shader; Texture* texture;
+        Shader* shader;
+        Texture** textures;
 };
 
 }

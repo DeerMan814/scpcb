@@ -40,7 +40,7 @@ struct Texture {
         Texture(Graphics* gfx, const String& fn);
         ~Texture();
 
-        void useTexture();
+        void useTexture(int layer);
 
         bool isRenderTarget() const;
     protected:

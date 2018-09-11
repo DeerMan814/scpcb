@@ -144,7 +144,7 @@ void Mesh::render() {
     material->getShader()->useShader();
     graphics->useMatrixCBuffer();
     graphics->useSampler();
-    material->getTexture()->useTexture();
+    material->getTexture(0)->useTexture(0);
 
     dxContext->DrawIndexed(primitives.size()*dxIndexMultiplier, 0, 0);
 }

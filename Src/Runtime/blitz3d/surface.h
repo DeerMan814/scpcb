@@ -106,7 +106,7 @@ public:
 
 private:
     String name;
-	//gxMesh *mesh;
+	Mesh* mesh;
     std::vector<Vertex> vertices;
     std::vector<Triangle> triangles;
 	int mesh_vs,mesh_ts;
