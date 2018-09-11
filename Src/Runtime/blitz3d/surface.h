@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "../gxruntime/StringType.h"
+#include "../gxruntime/Mesh.h"
 
 #include "model.h"
 
@@ -88,6 +89,7 @@ public:
 		++mon->geom_changes;
 	}
 
+    void Surface::setMaterial(GX::Material* b);
 	Vector getColor( int index )const;
 	void setColor( int index,const Vector &v );
 	void addVertices( const std::vector<Vertex> &verts );
@@ -106,7 +108,8 @@ public:
 
 private:
     String name;
-	Mesh* mesh;
+    GX::Material* material;
+	GX::Mesh* mesh;
     std::vector<Vertex> vertices;
     std::vector<Triangle> triangles;
 	int mesh_vs,mesh_ts;

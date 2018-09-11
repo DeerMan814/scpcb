@@ -125,6 +125,7 @@
       <AssemblerOutput>NoListing</AssemblerOutput>
       <MinimalRebuild>false</MinimalRebuild>
       <CallingConvention>Cdecl</CallingConvention>
+      <AdditionalIncludeDirectories>..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\FreeImage-3.18.0\Dist\x64;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -175,6 +176,7 @@
       <AssemblerOutput>NoListing</AssemblerOutput>
       <MinimalRebuild>false</MinimalRebuild>
       <CallingConvention>Cdecl</CallingConvention>
+      <AdditionalIncludeDirectories>..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\FreeImage-3.18.0\Dist\x64;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -205,6 +207,7 @@
       <ProgramDataBaseFileName>.\obj\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CallingConvention>Cdecl</CallingConvention>
+      <AdditionalIncludeDirectories>..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\FreeImage-3.18.0\Dist\x64;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -234,6 +237,7 @@
       <ProgramDataBaseFileName>.\obj\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CallingConvention>Cdecl</CallingConvention>
+      <AdditionalIncludeDirectories>..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\FreeImage-3.18.0\Dist\x64;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -283,6 +287,7 @@
     <ClInclude Include="meshloader.h" />
     <ClInclude Include="meshmodel.h" />
     <ClInclude Include="meshutil.h" />
+    <ClInclude Include="model.h" />
     <ClInclude Include="object.h" />
     <ClInclude Include="pivot.h" />
     <ClInclude Include="rendercontext.h" />

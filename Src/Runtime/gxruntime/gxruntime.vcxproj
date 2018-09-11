@@ -125,7 +125,7 @@
       <AssemblerOutput>NoListing</AssemblerOutput>
       <MinimalRebuild>false</MinimalRebuild>
       <CallingConvention>Cdecl</CallingConvention>
-      <AdditionalIncludeDirectories>..\..\Libraries\FreeImage-3.18.0\Dist\x32;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\FreeImage-3.18.0\Dist\x64;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -176,7 +176,7 @@
       <AssemblerOutput>NoListing</AssemblerOutput>
       <MinimalRebuild>false</MinimalRebuild>
       <CallingConvention>Cdecl</CallingConvention>
-      <AdditionalIncludeDirectories>..\..\Libraries\FreeImage-3.18.0\Dist\x64;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\FreeImage-3.18.0\Dist\x64;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -209,7 +209,7 @@
       <ProgramDataBaseFileName>.\obj\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CallingConvention>Cdecl</CallingConvention>
-      <AdditionalIncludeDirectories>..\..\Libraries\FreeImage-3.18.0\Dist\x32;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\FreeImage-3.18.0\Dist\x64;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -241,7 +241,7 @@
       <ProgramDataBaseFileName>.\obj\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CallingConvention>Cdecl</CallingConvention>
-      <AdditionalIncludeDirectories>..\..\Libraries\FreeImage-3.18.0\Dist\x64;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\FreeImage-3.18.0\Dist\x64;..\..\Libraries\freetype-2.9.1\include;..\..\Libraries\SDL2-2.0.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>

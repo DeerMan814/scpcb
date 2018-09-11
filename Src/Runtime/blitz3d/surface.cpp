@@ -16,11 +16,11 @@ mesh(0),mesh_vs(0),mesh_ts(0),valid_vs(0),valid_ts(0),mon(m){
 }
 
 Surface::~Surface(){
-	if( mesh ) gx_graphics->freeMesh( mesh );
+	if( mesh ) delete mesh;
 }
 
-void Surface::setBrush( const Brush &b ){
-	brush=b;
+void Surface::setMaterial( GX::Material* b ){
+	material=b;
 	++mon->brush_changes;
 }
 
