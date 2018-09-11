@@ -252,49 +252,6 @@
       <OutputFile>.\lib\$(Platform)\$(Configuration)\blitz3d.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="animation.cpp" />
-    <ClCompile Include="animator.cpp" />
-    <ClCompile Include="camera.cpp" />
-    <ClCompile Include="collision.cpp" />
-    <ClCompile Include="frustum.cpp" />
-    <ClCompile Include="geom.cpp" />
-    <ClCompile Include="listener.cpp" />
-    <ClCompile Include="loader_3ds.cpp" />
-    <ClCompile Include="loader_b3d.cpp" />
-    <ClCompile Include="meshcollider.cpp" />
-    <ClCompile Include="meshloader.cpp" />
-    <ClCompile Include="meshmodel.cpp" />
-    <ClCompile Include="meshutil.cpp" />
-    <ClCompile Include="object.cpp" />
-    <ClCompile Include="pivot.cpp" />
-    <ClCompile Include="sprite.cpp" />
-    <ClCompile Include="surface.cpp" />
-    <ClCompile Include="world.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="animation.h" />
-    <ClInclude Include="animator.h" />
-    <ClInclude Include="blitz3d.h" />
-    <ClInclude Include="camera.h" />
-    <ClInclude Include="collision.h" />
-    <ClInclude Include="frustum.h" />
-    <ClInclude Include="geom.h" />
-    <ClInclude Include="listener.h" />
-    <ClInclude Include="loader_3ds.h" />
-    <ClInclude Include="loader_b3d.h" />
-    <ClInclude Include="meshcollider.h" />
-    <ClInclude Include="meshloader.h" />
-    <ClInclude Include="meshmodel.h" />
-    <ClInclude Include="meshutil.h" />
-    <ClInclude Include="model.h" />
-    <ClInclude Include="object.h" />
-    <ClInclude Include="pivot.h" />
-    <ClInclude Include="rendercontext.h" />
-    <ClInclude Include="sprite.h" />
-    <ClInclude Include="surface.h" />
-    <ClInclude Include="world.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
