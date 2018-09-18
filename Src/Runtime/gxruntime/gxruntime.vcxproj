@@ -263,6 +263,7 @@
     <ClCompile Include="gxdir.cpp" />
     <ClCompile Include="gxfilesystem.cpp" />
     <ClCompile Include="gxutil.cpp" />
+    <ClCompile Include="Init.cpp" />
     <ClCompile Include="IO.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="Material.cpp" />
@@ -284,6 +285,7 @@
     <ClInclude Include="gxfilesystem.h" />
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="gxutil.h" />
+    <ClInclude Include="Init.h" />
     <ClInclude Include="IO.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="Material.h" />

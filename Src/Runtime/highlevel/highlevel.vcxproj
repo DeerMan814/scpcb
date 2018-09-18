@@ -19,11 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="Pivot.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Model.cpp" />
+    <ClCompile Include="Pivot.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <SccProjectName />
@@ -145,7 +150,7 @@
     </Bscmake>
     <Lib>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\lib\$(Platform)\$(Configuration)\blitz3d.lib</OutputFile>
+      <OutputFile>.\lib\$(Platform)\$(Configuration)\highlevel.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -196,7 +201,7 @@
     </Bscmake>
     <Lib>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\lib\$(Platform)\$(Configuration)\blitz3d.lib</OutputFile>
+      <OutputFile>.\lib\$(Platform)\$(Configuration)\highlevel.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -227,7 +232,7 @@
     </Bscmake>
     <Lib>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\lib\$(Platform)\$(Configuration)\blitz3d.lib</OutputFile>
+      <OutputFile>.\lib\$(Platform)\$(Configuration)\highlevel.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -257,7 +262,7 @@
     </Bscmake>
     <Lib>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\lib\$(Platform)\$(Configuration)\blitz3d.lib</OutputFile>
+      <OutputFile>.\lib\$(Platform)\$(Configuration)\highlevel.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

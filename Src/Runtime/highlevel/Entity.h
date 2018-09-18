@@ -5,18 +5,17 @@
 
 class Entity {
     public:
-        int getCollisionCategory() const;
-        GX::Vector2f getCollisionRadii() const;
+        virtual int getCollisionCategory() const;
         GX::Vector3f getPosition() const;
+        virtual GX::Vector3f getRotation() const;
 
-        void setCollisionCategory(int coll);
-        void setCollisionRadii(GX::Vector2f radii);
-        void setPosition(GX::Vector3f pos);
+        virtual void setCollisionCategory(int category);
+        virtual void setPosition(GX::Vector3f pos);
+        virtual void setRotation(GX::Vector3f rot);
     protected:
         Entity();
         ~Entity();
 
-        int collisionCategory;
         GX::Vector3f position;
 };
 

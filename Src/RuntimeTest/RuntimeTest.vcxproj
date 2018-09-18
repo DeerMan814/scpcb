@@ -93,7 +93,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../Libraries/bbruntime/;../Libraries/blitz3d/;../Libraries/freeimage/;../Libraries/gxruntime/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../Libraries/freetype-2.9.1/include;../Libraries/FreeImage-3.18.0/Dist/$(Platform);../Libraries/SDL2-2.0.8/include;../Libraries/freeimage/;../Runtime/gxruntime/;../Runtime/highlevel/</AdditionalIncludeDirectories>
       <AssemblerListingLocation>.\obj\$(Platform)\$(Configuration)\</AssemblerListingLocation>
       <ObjectFileName>.\obj\$(Platform)\$(Configuration)\</ObjectFileName>
       <ProgramDataBaseFileName>.\obj\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
@@ -101,7 +101,8 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>../Runtime/bbruntime/lib/$(Platform)/$(Configuration)/bbruntime.lib;../Runtime/blitz3d/lib/$(Platform)/$(Configuration)/blitz3d.lib;../Runtime/gxruntime/lib/$(Platform)/$(Configuration)/gxruntime.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>../Libraries/FreeImage-3.18.0/Dist/$(Platform)/FreeImage.lib;../Libraries/SDL2-2.0.8/lib/$(Platform)/SDL2.lib;../Libraries/SDL2-2.0.8/lib/$(Platform)/SDL2main.lib;../Libraries/freetype-2.9.1/objs/$(Platform)/$(Configuration)/freetype.lib;../Runtime/gxruntime/lib/$(Platform)/$(Configuration)/gxruntime.lib;d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -110,14 +111,15 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../Libraries/bbruntime/;../Libraries/blitz3d/;../Libraries/freeimage/;../Libraries/gxruntime/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../Libraries/freetype-2.9.1/include;../Libraries/FreeImage-3.18.0/Dist/$(Platform);../Libraries/SDL2-2.0.8/include;../Libraries/freeimage/;../Runtime/gxruntime/;../Runtime/highlevel/</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <AssemblerListingLocation>.\obj\$(Platform)\$(Configuration)\</AssemblerListingLocation>
       <ObjectFileName>.\obj\$(Platform)\$(Configuration)\</ObjectFileName>
       <ProgramDataBaseFileName>.\obj\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>../Runtime/bbruntime/lib/$(Platform)/$(Configuration)/bbruntime.lib;../Runtime/blitz3d/lib/$(Platform)/$(Configuration)/blitz3d.lib;../Runtime/gxruntime/lib/$(Platform)/$(Configuration)/gxruntime.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>../Libraries/FreeImage-3.18.0/Dist/$(Platform)/FreeImage.lib;../Libraries/SDL2-2.0.8/lib/$(Platform)/SDL2.lib;../Libraries/SDL2-2.0.8/lib/$(Platform)/SDL2main.lib;../Libraries/freetype-2.9.1/objs/$(Platform)/$(Configuration)/freetype.lib;../Runtime/gxruntime/lib/$(Platform)/$(Configuration)/gxruntime.lib;d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -126,14 +128,15 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../Libraries/bbruntime/;../Libraries/blitz3d/;../Libraries/freeimage/;../Libraries/gxruntime/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../Libraries/freetype-2.9.1/include;../Libraries/FreeImage-3.18.0/Dist/$(Platform);../Libraries/SDL2-2.0.8/include;../Libraries/freeimage/;../Runtime/gxruntime/;../Runtime/highlevel/</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <AssemblerListingLocation>.\obj\$(Platform)\$(Configuration)\</AssemblerListingLocation>
       <ObjectFileName>.\obj\$(Platform)\$(Configuration)\</ObjectFileName>
       <ProgramDataBaseFileName>.\obj\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>wsock32.lib;amstrmid.lib;winmm.lib;dxguid.lib;ddraw.lib;dsound.lib;dinput8.lib;odbc32.lib;odbccp32.lib;../Libraries/bbruntime/lib/$(Platform)/$(Configuration)/bbruntime.lib;../Libraries/blitz3d/lib/$(Platform)/$(Configuration)/blitz3d.lib;../Libraries/freeimage/ZLib/lib/$(Platform)/$(Configuration)/ZLib.lib;../Libraries/freeimage/LibJPEG/lib/$(Platform)/$(Configuration)/LibJPEG.lib;../Libraries/freeimage/LibPNG/lib/$(Platform)/$(Configuration)/LibPNG.lib;../Libraries/freeimage/FreeImageLib/lib/$(Platform)/$(Configuration)/FreeImage.lib;../Libraries/gxruntime/lib/$(Platform)/$(Configuration)/gxruntime.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>../Libraries/FreeImage-3.18.0/Dist/$(Platform)/FreeImage.lib;../Libraries/SDL2-2.0.8/lib/$(Platform)/SDL2.lib;../Libraries/SDL2-2.0.8/lib/$(Platform)/SDL2main.lib;../Libraries/freetype-2.9.1/objs/$(Platform)/$(Configuration)/freetype.lib;../Runtime/gxruntime/lib/$(Platform)/$(Configuration)/gxruntime.lib;d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -144,7 +147,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../Libraries/bbruntime/;../Libraries/blitz3d/;../Libraries/freeimage/;../Libraries/gxruntime/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../Libraries/freetype-2.9.1/include;../Libraries/FreeImage-3.18.0/Dist/$(Platform);../Libraries/SDL2-2.0.8/include;../Libraries/freeimage/;../Runtime/gxruntime/;../Runtime/highlevel/</AdditionalIncludeDirectories>
       <AssemblerListingLocation>.\obj\$(Platform)\$(Configuration)\</AssemblerListingLocation>
       <ObjectFileName>.\obj\$(Platform)\$(Configuration)\</ObjectFileName>
       <ProgramDataBaseFileName>.\obj\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
@@ -152,7 +155,8 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>wsock32.lib;amstrmid.lib;winmm.lib;dxguid.lib;ddraw.lib;dsound.lib;dinput8.lib;odbc32.lib;odbccp32.lib;../Libraries/bbruntime/lib/$(Platform)/$(Configuration)/bbruntime.lib;../Libraries/blitz3d/lib/$(Platform)/$(Configuration)/blitz3d.lib;../Libraries/freeimage/ZLib/lib/$(Platform)/$(Configuration)/ZLib.lib;../Libraries/freeimage/LibJPEG/lib/$(Platform)/$(Configuration)/LibJPEG.lib;../Libraries/freeimage/LibPNG/lib/$(Platform)/$(Configuration)/LibPNG.lib;../Libraries/freeimage/FreeImageLib/lib/$(Platform)/$(Configuration)/FreeImage.lib;../Libraries/gxruntime/lib/$(Platform)/$(Configuration)/gxruntime.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>../Libraries/FreeImage-3.18.0/Dist/$(Platform)/FreeImage.lib;../Libraries/SDL2-2.0.8/lib/$(Platform)/SDL2.lib;../Libraries/SDL2-2.0.8/lib/$(Platform)/SDL2main.lib;../Libraries/freetype-2.9.1/objs/$(Platform)/$(Configuration)/freetype.lib;../Runtime/gxruntime/lib/$(Platform)/$(Configuration)/gxruntime.lib;d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

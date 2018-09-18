@@ -21,3 +21,9 @@ Thumbs.db
 
 # macOS
 *.DS_Store
+*.obj
+*.tlog
+*.log
+*.lib
+*.user
+*.res
